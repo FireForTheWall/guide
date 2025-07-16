@@ -55,7 +55,7 @@ Public Tor bridges are available on BridgeDB, a website run by the Tor team to p
 
 To obtain some bridges, you can go to [https://bridges.torproject.org](https://bridges.torproject.org), select the type of pluggable transport you need, and BridgeDB will provide you with a few bridges of that type.
 
-![Screenshot of BridgeDB website](/pictures/BridgeDB_screenshot.jpg)
+![Screenshot of BridgeDB website](/guide/pictures/BridgeDB_screenshot.jpg)
 
 But the problem is that the BridgeDB website is likely to be censored as well. To address this issue, the Tor team has come up with alternative ways to get bridges from BridgeDB, one of which is through email.
 
@@ -63,7 +63,7 @@ To get bridges via email, you need to send an email with an **empty subject** an
 
 Another way to get bridges is through their Telegram bot. The Tor team has recently launched a Telegram bot that gives users fresh bridges every time they start it. The bot is available at [@GetBridgesBot](https://t.me/GetBridgesBot) on Telegram.
 
-![Screenshot of GetBridgesBot](/pictures/GetBridgesBot_screenshot.jpg)
+![Screenshot of GetBridgesBot](/guide/pictures/GetBridgesBot_screenshot.jpg)
 
 ### C Tor
 
@@ -254,15 +254,15 @@ For Windows, macOS, and Android, it would be a `.exe`, `.dmg`, and `.apk` file, 
 
 After opening the Tor Browser, you will see a browser like this:
 
-![TorBrowser's Startpage Screenshot](/pictures/TorBrowser-screenshot.jpg)
+![TorBrowser's Startpage Screenshot](/guide/pictures/TorBrowser-screenshot.jpg)
 
 Here, you can click on the "Configure a Connection" button and add your bridges. Bridges can be added from the built-in bridges:
 
-![TorBrowser's BuiltIn Bridges Screenshot](/pictures/TorBrowser_BuiltInBridge-screenshot.jpg)
+![TorBrowser's BuiltIn Bridges Screenshot](/guide/pictures/TorBrowser_BuiltInBridge-screenshot.jpg)
 
 Or from custom bridges retrieved from BridgeDB:
 
-![TorBrowser's Custom Bridges Screenshot](/pictures/TorBrowser_CustomBridge-screenshot.jpg)
+![TorBrowser's Custom Bridges Screenshot](/guide/pictures/TorBrowser_CustomBridge-screenshot.jpg)
 
 When you have added your bridges, you can return to the start page and click on "Connect." After a successful connection, you can either use it as a censorship-free browser or use a SOCKS proxy outside the browser at `127.0.0.1:9150`. Note that this SOCKS proxy is only available as long as your Tor Browser is open, running, and connected.
 
@@ -289,7 +289,7 @@ Here is a list for installing Orbot on **iOS Devices**:
 
 After installing Orbot, the usage is fairly straightforward: you add your bridges if needed and tap "Connect."
 
-![Orbot Screenshot](/pictures/Orbot_screenshot.jpg)
+![Orbot Screenshot](/guide/pictures/Orbot_screenshot.jpg)
 
 If you have created your own bridges and want to use those instead of public bridges, consider the option "Custom bridges" and paste the bridge lines there. Otherwise, the app will provide you bridges from BridgeDB if you use other options.
 
