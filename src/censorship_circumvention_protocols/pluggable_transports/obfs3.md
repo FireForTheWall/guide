@@ -1,3 +1,5 @@
+# Obfs3
+
 obfs3 is the precursor to the obfs4 protocol, both developed by the Tor Project to help lift restrictions placed on the Tor Network by countries such as China, Iran, Russia, and more.
 
 Obfs3 is a pluggable transport meant to make traffic look random and not like any other protocol. Although Obfs3 is no longer supported, and its successor, obfs4, does a much better job, it can be used to obfuscate other traffic such as SSH traffic or VPN traffic, and it is still highly effective at bypassing censorship as a standalone obfuscation protocol.
