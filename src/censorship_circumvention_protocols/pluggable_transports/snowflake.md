@@ -1,6 +1,6 @@
 # Snowflake
 
-Snowflake is a pluggable transport protocol developed by the [Tor](/censorship_resistant_networks/tor_network) Project to help bypass censorship imposed on Tor in heavily restricted countries like China, Iran, Russia, and more.
+Snowflake is a pluggable transport protocol developed by the [Tor](/guide/censorship_resistant_networks/tor_network) Project to help bypass censorship imposed on Tor in heavily restricted countries like China, Iran, Russia, and more.
 
 Snowflake works by routing your traffic through volunteer-operated WebRTC proxies to make it look like you are on a video call instead of using Tor.
 

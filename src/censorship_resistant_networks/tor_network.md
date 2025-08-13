@@ -6,26 +6,26 @@ Tor works by routing traffic through a series of volunteer nodes. This series of
 
 ## How it works to bypass censorship
 
-Because of the Tor network's layered routing and exit nodes (which route the Tor network's traffic to the [clearnet](/appendix_a.md#clearnet)), Tor can act as a 3-layered VPN, meaning you will send your data to an entry node, and the data will be sent to the clearnet by an exit node that is very likely to have free access to the internet.
+Because of the Tor network's layered routing and exit nodes (which route the Tor network's traffic to the [clearnet](/guide/appendix_a.md#clearnet)), Tor can act as a 3-layered VPN, meaning you will send your data to an entry node, and the data will be sent to the clearnet by an exit node that is very likely to have free access to the internet.
 
-The problem is that the Tor network's traffic is detectable by firewalls and can be censored. Also, the entry nodes are known and can be censored using [IP filtering](/censorship_techniques/ip_filtering.md) or [DNS Spoofing](/censorship_techniques/dns_spoofing.md) techniques. Because of this problem, Tor features some circumvention tools to bypass blocked access to the Tor network.
+The problem is that the Tor network's traffic is detectable by firewalls and can be censored. Also, the entry nodes are known and can be censored using [IP filtering](/guide/censorship_techniques/ip_filtering.md) or [DNS Spoofing](/guide/censorship_techniques/dns_spoofing.md) techniques. Because of this problem, Tor features some circumvention tools to bypass blocked access to the Tor network.
 
 These circumvention tools are called "pluggable transports" or "bridges." They cannot usually be used directly to obfuscate normal traffic, and they must be used along with the Tor network (they can be used to obfuscate other traffic by some tweaks and modifications). [^3]
 
 | Pluggable Transport                                          | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Obfs3](/censorship_circumvention_protocols/pluggable_transports/obfs3.md) | Obfs3 is a pluggable transport meant to make traffic look random and not like any other protocol. Although Obfs3 is not supported anymore, it can be used to obfuscate other traffic such as SSH traffic or VPN traffic. |
-| [Obfs4](/censorship_circumvention_protocols/pluggable_transports/obfs4.md) | It also makes Tor traffic look random while also preventing Obfs4 bridges from being found and censored through internet scanning, so they are less likely to be censored compared to Obfs3 bridges. |
-| [meek](/censorship_circumvention_protocols/pluggable_transports/meek.md) | Meek transports make traffic look like you are browsing a major website. For example, meek-azure makes it look like you're using Microsoft services instead of Tor. |
-| [Snowflake](/censorship_circumvention_protocols/pluggable_transports/snowflake.md) | Snowflake works by routing your traffic through volunteer-operated WebRTC proxies to make it look like you are on a video call instead of Tor. |
-| [WebTunnel](/censorship_circumvention_protocols/pluggable_transports/webtunnel.md) | WebTunnel makes your Tor traffic look like HTTPS website traffic. |
+| [Obfs3](/guide/censorship_circumvention_protocols/pluggable_transports/obfs3.md) | Obfs3 is a pluggable transport meant to make traffic look random and not like any other protocol. Although Obfs3 is not supported anymore, it can be used to obfuscate other traffic such as SSH traffic or VPN traffic. |
+| [Obfs4](/guide/censorship_circumvention_protocols/pluggable_transports/obfs4.md) | It also makes Tor traffic look random while also preventing Obfs4 bridges from being found and censored through internet scanning, so they are less likely to be censored compared to Obfs3 bridges. |
+| [meek](/guide/censorship_circumvention_protocols/pluggable_transports/meek.md) | Meek transports make traffic look like you are browsing a major website. For example, meek-azure makes it look like you're using Microsoft services instead of Tor. |
+| [Snowflake](/guide/censorship_circumvention_protocols/pluggable_transports/snowflake.md) | Snowflake works by routing your traffic through volunteer-operated WebRTC proxies to make it look like you are on a video call instead of Tor. |
+| [WebTunnel](/guide/censorship_circumvention_protocols/pluggable_transports/webtunnel.md) | WebTunnel makes your Tor traffic look like HTTPS website traffic. |
 
 ## Privacy and Security Measures
 
 Tor network's communications are encrypted and secure, meaning your ISP (Internet Service Provider) cannot decrypt the content of the messages and data passing through. But they can detect that you are using Tor if it is not used with a pluggable transport such as Obfs4 or Snowflake, due to a few reasons:
 
-- [Traffic analysis](/censorship_techniques/traffic_analysis.md) can be used to detect and block Tor connections based on unique characteristics of Tor network's packets, such as packet sizes (Tor has a fixed length for its cell sizes), timing, and encrypted patterns.
-- [Deep Packet Inspection (DPI)](/censorship_techniques/deep_packet_inspection.md) can be used to inspect the fully encrypted data and find specific patterns associated with Tor network's communications.
+- [Traffic analysis](/guide/censorship_techniques/traffic_analysis.md) can be used to detect and block Tor connections based on unique characteristics of Tor network's packets, such as packet sizes (Tor has a fixed length for its cell sizes), timing, and encrypted patterns.
+- [Deep Packet Inspection (DPI)](/guide/censorship_techniques/deep_packet_inspection.md) can be used to inspect the fully encrypted data and find specific patterns associated with Tor network's communications.
 - Tor has a public list of its entry nodes and exit nodes, which can be easily blocked by firewalls.
 
 Also, if the Tor network is used to access the clearnet, meaning the destination of requests is not inside the Tor network (for example, duckduckgo.com is a clearnet, or normal internet website, and duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion is a Tor network website), the exit node will be able to see the data that it is passing to the destination. But this is less of a problem now that most websites use HTTPS for encryption, leaving only some small metadata for exit nodes to see. And also, when they see the data, they cannot know where it came from.
